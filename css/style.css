@@ -29,6 +29,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  background-color: #000000;
 }
 
 *, *:before, *:after {
@@ -51,6 +52,40 @@ header {
   position: relative;
 }
 
+header .img-flex {
+  display: block;
+  width: 100%;
+}
+
+header .header {
+  background-color: #000;
+  background-size: cover;
+}
+
+header .logo {
+  width: 35%;
+  padding: 1em 0 0 .50em;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 25em) {
+  .logo {
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 38em) {
+  .logo {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .logo {
+    width: 45%;
+  }
+}
+
 .toggle-btn {
   position: absolute;
   right: 1em;
@@ -63,40 +98,57 @@ header {
 
 .navigation li {
   list-style-type: none;
+  background-color: #000;
+  text-transform: uppercase;
 }
 
 .navigation li:first-child a {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #FFFFFF;
 }
 
 .navigation li a {
   display: block;
   text-align: center;
   padding: .5em 1em;
-  border-bottom: 1px solid #ccc;
   text-decoration: none;
+  color: #fff;
 }
 
-.toggle-btn,
-.close-btn {
-  color: #222;
-  text-decoration: none;
+.navigation li a:hover {
+  color: #ffd710;
+}
+
+.toggle-btn {
+  color: #fff;
   text-decoration: none;
   height: 40px;
   width: 40px;
+  padding-top: .5em;
 }
 
-.toggle-btn:before,
+.toggle-btn:before {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  padding: 13px 11px;
+}
+
+.close-btn {
+  color: #222;
+  text-decoration: none;
+  height: 40px;
+  width: 40px;
+  padding-top: .5em;
+}
+
 .close-btn:before {
   height: 40px;
   width: 40px;
   display: inline-block;
   padding: 13px 11px;
-  border: 1px solid #ccc;
 }
 
-.toggle-btn span,
-.close-btn span {
+span {
   position: absolute !important;
   height: 1px;
   width: 1px;
@@ -108,15 +160,12 @@ header {
   margin: 1em;
 }
 
-/**
-*Sliding navagation
-*/
 @media only screen and (max-width: 60em) {
   .site-wrapper {
     position: relative;
     overflow: hidden;
     width: 100%;
-    z-index: 100;
+    z-index: 100%;
   }
   .site-wrapper .sliding-canvas {
     width: 100%;
@@ -143,13 +192,42 @@ header {
 }
 
 @media only screen and (min-width: 60em) {
-  .toggle-btn,
-  .close-btn {
+  .toggle-btn, .close-btn {
     display: none;
   }
+  .navigation {
+    padding-right: 5em;
+    /* closes ul*/
+    /* closes li*/
+  }
+  .navigation ul {
+    padding-right: 1em;
+    float: right;
+    padding-top: 3em;
+  }
+  .navigation li {
+    list-style-type: none;
+    background-color: transparent;
+    display: inline-block;
+    /* closes first-child a*/
+    /* closes a*/
+  }
+  .navigation li:first-child a {
+    border-top: none;
+  }
+  .navigation li a {
+    display: block;
+    text-align: center;
+    padding: .5em 1em;
+    border-bottom: none;
+    text-decoration: none;
+    color: #fff;
+  }
+  /* closes .nav*/
 }
 
-body.noscript .navigation {
-  postion: static;
+/* closes media query*/
+body.script .navigation {
+  position: static;
   right: auto;
 }
