@@ -52,19 +52,18 @@ header {
   position: relative;
 }
 
-header .img-flex {
+.img-flex {
   display: block;
   width: 100%;
 }
 
-header .header {
+.header {
   background-color: #000;
   background-size: cover;
 }
 
-header .logo {
+.logo {
   width: 35%;
-  padding: 1em 0 0 .50em;
   display: inline-block;
 }
 
@@ -107,7 +106,7 @@ header .logo {
 }
 
 .navigation li a {
-  display: block;
+  display: inline-block;
   text-align: center;
   padding: .5em 1em;
   text-decoration: none;

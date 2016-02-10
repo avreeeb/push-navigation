@@ -32,6 +32,7 @@ body{
 header {
   padding: 0 1em;
   position: relative;
+}
 
 .img-flex {
   display: block;
@@ -45,9 +46,8 @@ header {
 
 .logo {
   width:35%;
-  padding: 1em 0 0 .50em;
   display: inline-block;
-}
+
 }
   @media only screen and (min-width: 25em) {
     .logo {
@@ -83,7 +83,7 @@ header {
       border-top: 1px solid #FFFFFF;
     }
     a{
-      display: block;
+      display: inline-block;
       text-align: center;
       padding: .5em 1em;
       text-decoration: none;
